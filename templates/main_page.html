@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
+    <title>Main Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background-color:orchid">
+<center><h1>Welcome to Product CURD Operations</h1></center>
+
+<div class="jumbotron bg-dark">
+<div id="div1">
+<a class="bg-success text-white" href="/create/">Create</a>
+<a class="bg-success text-white" href="/update/">Update</a>
+<a class="bg-success text-white" href="/retrieve/">Retrieve</a>
+<a class="bg-success text-white" href="/delete/">Delete</a>
+</div>
+</div>
+</body>
+</html>

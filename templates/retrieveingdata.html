@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/retrieving.css' %}">
+    <title>Existing Product Details</title>
+
+    <style>
+        body{
+            background-color: aqua;
+        }
+        a{
+            color: red;
+            font-size: 30px;
+        }
+        table{
+            background: bisque;
+            {#border: none;#}
+        }
+        #htr{
+            background-color:brown;
+            color: white;
+        }
+        th,td{
+            padding: 10px 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+<center>
+<h2>Products Details</h2>
+{% if pdata %}
+<table border="2">
+<thead>
+    <tr id="htr">
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Cost</th>
+        <th>Product Class</th>
+        <th>Product Weight</th>
+    </tr>
+</thead>
+{% for data in pdata %}
+    <tbody>
+        <tr>
+            <td>{{ data.product_number }}</td>
+            <td>{{ data.product_name }}</td>
+            <td>{{ data.product_cost }}</td>
+            <td>{{ data.product_class }}</td>
+            <td>{{ data.product_weight }}</td>
+        </tr>
+    </tbody>
+{% endfor %}
+</table>
+    <a href="/">Go to Home</a>
+
+{% else %}
+<h2>Product data is not available</h2>
+{% endif %}
+</center>
+</body>
+</html>
